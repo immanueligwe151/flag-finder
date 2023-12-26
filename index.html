@@ -23,12 +23,56 @@
     <section>
       <div id="outer-div">
         <!--This div will wrap everything inside of the game-->
-        <h3 id="game-text">Welcome!</h3>
+        <h2 id="game-text">Welcome!</h2>
         <div id="inner-div">
           <!--This div is basically the gameplay area; refer to sketches in README-->
-          <button id="start-button" class="big-button" onclick="startGame();">
+          <img
+            src="https://flagcdn.com/h120/ua.png"
+            srcset="https://flagcdn.com/h240/ua.png 2x"
+            height="120"
+            alt="Ukraine"
+          />
+          <div id="options-div">
+            <input
+              type="radio"
+              class="answer-selections"
+              id="first"
+              name="options"
+              value=""
+            />
+            <label for="first">Country A</label>
+            <input
+              type="radio"
+              class="answer-selections"
+              id="second"
+              name="options"
+              value=""
+            />
+            <label for="second">Country B</label>
+            <input
+              type="radio"
+              class="answer-selections"
+              id="third"
+              name="options"
+              value=""
+            />
+            <label for="third">Country C</label>
+            <input
+              type="radio"
+              class="answer-selections"
+              id="fourth"
+              name="options"
+              value=""
+            />
+            <label for="fourth">Country D</label>
+          </div>
+          <button
+            id="next-button"
+            class="small-button"
+            onclick="nextQuestion();"
+          >
             <!--This is the button that starts the game-->
-            Begin
+            Next
           </button>
         </div>
       </div>

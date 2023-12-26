@@ -1,8 +1,69 @@
-#header-div {
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+body {
+    font-family: 'Roboto', normal;
+    margin: 15px;
+}
+
+header {
     text-align: center;
     background-color: darkseagreen;
 }
 
-body {
-    background: blue;
+section {
+    margin-top: 0;
+}
+
+#header-div {
+    padding: 5px;
+}
+
+#outer-div {
+    background-color: aquamarine;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inner-div {
+    border: medium solid black;
+    border-radius: 15px;
+    width: 90%;
+    min-height: 200px;
+    max-height: 900px;
+    padding: 5px;
+    background-color: greenyellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background-color: aliceblue;
+    padding: 5px 12px 5px 12px;
+}
+
+.big-button {
+    font-size: 40px;
+    font-weight: 600;
+    border-radius: 8px;
+    width: fit-content;
+}
+
+.small-button {
+    font-size: medium;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.big-button:hover {
+    background-color: aquamarine;
+}
+
+footer {
+    background-color: darkseagreen;
+    text-align: center;
 }
