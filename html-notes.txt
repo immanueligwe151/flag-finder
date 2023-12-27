@@ -1,0 +1,52 @@
+//the HTML for when the website is newly loaded
+        <button id="start-button" class="big-button" onclick="startGame();">
+            <!--This is the button that starts the game-->
+            Begin</button>
+
+
+//the innerHTML for the game play (be sure to replace the appropriate parameters when writing the JS code)
+        <img
+            src="https://flagcdn.com/h120/ua.png"
+            srcset="https://flagcdn.com/h240/ua.png 2x"
+            height="120"
+            alt="Ukraine"
+          />
+          <div id="options-div">
+            <span class="options-span">
+                <input type="radio" class="answer-selections" id="first" name="options" value="" />
+                <label for="first">Country A</label>
+            </span>
+            <span class="options-span">
+                <input type="radio" class="answer-selections" id="second" name="options" value="" />
+                <label for="second">Country B</label>
+            </span>
+            <span class="options-span">
+                <input type="radio" class="answer-selections" id="third" name="options" value="" />
+                <label for="third">Country C</label>
+            </span>
+            <span class="options-span">
+                <input type="radio" class="answer-selections" id="fourth" name="options" value="" />
+                <label for="fourth">Country D</label>
+            </span>
+            
+          </div>
+          <button
+            id="next-button"
+            class="small-button"
+            onclick="nextQuestion();"
+          >
+            <!--This is the button that starts the game-->
+            Next
+          </button>
+
+//the innerHTML for when the game is over and the endscreen is displayed
+          <h2>Your Score:</h2>
+          <h4>10</h4>
+          <button
+            id="restart-button"
+            class="small-button"
+            onclick="startGame();"
+          >
+            <!--This is the button that starts the game-->
+            Play Again
+          </button>

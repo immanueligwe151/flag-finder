@@ -25,54 +25,18 @@
         <!--This div will wrap everything inside of the game-->
         <h2 id="game-text">Welcome!</h2>
         <div id="inner-div">
-          <!--This div is basically the gameplay area; refer to sketches in README-->
-          <img
-            src="https://flagcdn.com/h120/ua.png"
-            srcset="https://flagcdn.com/h240/ua.png 2x"
-            height="120"
-            alt="Ukraine"
-          />
-          <div id="options-div">
-            <input
-              type="radio"
-              class="answer-selections"
-              id="first"
-              name="options"
-              value=""
-            />
-            <label for="first">Country A</label>
-            <input
-              type="radio"
-              class="answer-selections"
-              id="second"
-              name="options"
-              value=""
-            />
-            <label for="second">Country B</label>
-            <input
-              type="radio"
-              class="answer-selections"
-              id="third"
-              name="options"
-              value=""
-            />
-            <label for="third">Country C</label>
-            <input
-              type="radio"
-              class="answer-selections"
-              id="fourth"
-              name="options"
-              value=""
-            />
-            <label for="fourth">Country D</label>
-          </div>
+          <!--This div is basically the gameplay area; the HTML in this div will be 
+            directed by the JS code to change as at the appropriate moment when required; 
+            refer to README-->
+          <h2>Your Score:</h2>
+          <h4>10</h4>
           <button
-            id="next-button"
+            id="restart-button"
             class="small-button"
-            onclick="nextQuestion();"
+            onclick="startGame();"
           >
             <!--This is the button that starts the game-->
-            Next
+            Play Again
           </button>
         </div>
       </div>

@@ -4,11 +4,15 @@
 body {
     font-family: 'Roboto', normal;
     margin: 15px;
+    border: medium solid black;
+    border-radius: 15px;
 }
 
 header {
     text-align: center;
     background-color: darkseagreen;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
 section {
@@ -41,6 +45,30 @@ section {
     justify-content: center;
 }
 
+#options-div {
+    width: 70%;
+    min-width: 300px;
+    max-width: 470px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10%;
+}
+
+.options-span {
+    background-color: aqua;
+    padding: 5px;
+    border: thin solid black;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.options-span:hover {
+    background-color: cornsilk;
+}
+
 button {
     background-color: aliceblue;
     padding: 5px 12px 5px 12px;
@@ -59,11 +87,13 @@ button {
     border-radius: 8px;
 }
 
-.big-button:hover {
+button:hover {
     background-color: aquamarine;
 }
 
 footer {
     background-color: darkseagreen;
     text-align: center;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
