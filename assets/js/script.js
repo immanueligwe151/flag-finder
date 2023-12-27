@@ -1,18 +1,27 @@
 let score = 0;//this counts the score of the user, initialized as 0 once the game is begun
 let counter = 0;//a total of 10 questions will load, this keeps track of how many questions have been answered, initialized as 0 for the start of the game
+let country;//this will hold the country being viewed in the gameplay
 let countries = [];//the list to contain all countries featured in the game; initialized when the game is begun to be played
+let answerSelected = false;//this will be used to ensure the user doesn't move forward till the answer has been selected
 
 let gameText = document.getElementById('game-text');
 let innerDiv = document.getElementById('inner-div');
 
 
 function startGame() {
+    score = 0;
+    counter = 0;
+    country = null;
+    countries = []; //all these reset these respective values in the event of the game being restarted from within the game
     populateCountries();
     gameText.innerHTML = "What country is this?";
     nextQuestion();
 }
+
 function nextQuestion() {
-    let country = pickRandomCountry();
+    counter++;
+    //answerSelected = false;
+    country = pickRandomCountry();
     innerDiv.innerHTML = `
         ${country.flagHtml}
           <div id="options-div">
@@ -37,15 +46,55 @@ function nextQuestion() {
           <button
             id="next-button"
             class="small-button"
-            onclick="nextQuestion();"
+            onclick="checkAnswer();"
           >
             <!--This is the button that starts the game-->
             Next
           </button>
     `;
 }
-function endOfGame() {
 
+function checkAnswer() {
+    let correctAnswer = country.country;//takes the value of the correct country with which it will compare with the user choice
+    let chosenAnswer = "";//to store the answer that the user has chosen
+
+    let choiceButtons = document.getElementsByTagName('input');
+    let choiceLabels = document.getElementsByTagName('label');
+    //the block below takes the user's selection
+    if (choiceButtons[0].checked) {
+        chosenAnswer = choiceLabels[0].innerHTML;
+    } else if (choiceButtons[1].checked) {
+        chosenAnswer = choiceLabels[1].innerHTML;
+    } else if (choiceButtons[2].checked) {
+        chosenAnswer = choiceLabels[2].innerHTML;
+    } else if (choiceButtons[3].checked) {
+        chosenAnswer = choiceLabels[3].innerHTML;
+    }
+
+    if (chosenAnswer === correctAnswer) {
+        score++;
+        alert("Correct!");
+    } else {
+        alert("Sorry, incorrect!");
+    }
+
+    if (counter === 10) {
+        endOfGame();
+    } else {
+        nextQuestion();
+    }
+}
+
+function endOfGame() {
+    gameText.innerHTML = "Game Over";
+    innerDiv.innerHTML = `
+    <h2>Your Score:</h2>
+    <h4>${score}</h4>
+    <button id="restart-button" class="small-button" onclick="startGame();">
+    <!--This is the button that starts the game-->
+    Play Again
+    </button>
+    `;
 }
 
 function populateCountries() {
