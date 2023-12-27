@@ -50,3 +50,5 @@
             <!--This is the button that starts the game-->
             Play Again
           </button>
+
+i got the flag html texts from https://flagpedia.net

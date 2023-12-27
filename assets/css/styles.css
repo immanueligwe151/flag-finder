@@ -50,11 +50,10 @@ section {
     min-width: 300px;
     max-width: 470px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 10%;
+    gap: 5%;
 }
 
 .options-span {
@@ -63,6 +62,7 @@ section {
     border: thin solid black;
     border-radius: 15px;
     margin: 10px;
+    width: 150px;
 }
 
 .options-span:hover {
