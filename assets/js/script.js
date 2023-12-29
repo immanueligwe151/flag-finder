@@ -2,7 +2,6 @@ let score = 0;//this counts the score of the user, initialized as 0 once the gam
 let counter = 0;//a total of 10 questions will load, this keeps track of how many questions have been answered, initialized as 0 for the start of the game
 let country;//this will hold the country being viewed in the gameplay
 let countries = [];//the list to contain all countries featured in the game; initialized when the game is begun to be played
-let answerSelected = false;//this will be used to ensure the user doesn't move forward till the answer has been selected
 
 let gameText = document.getElementById('game-text');
 let innerDiv = document.getElementById('inner-div');
@@ -20,7 +19,6 @@ function startGame() {
 
 function nextQuestion() {
     counter++;
-    //answerSelected = false;
     country = pickRandomCountry();
     innerDiv.innerHTML = `
         ${country.flagHtml}
